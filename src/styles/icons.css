@@ -1,0 +1,21 @@
+.fa-times {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: 0.46rem;
+  font-weight: 200;
+}
+
+.fa-chevron-left {
+  position: absolute;
+  left: 0.24rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9b9b9b;
+  font-size: 0.4rem;
+}
+
+.fa-eye {
+  color: #c8c7cc;
+  font-size: 0.5rem;
+}
