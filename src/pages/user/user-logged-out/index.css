@@ -1,0 +1,174 @@
+:local(.logged-in) {
+}
+
+:local(.header) {
+  position: relative;
+  width: 15rem;
+  height: 5.9rem;
+  background: url(https://uploads.codesandbox.io/uploads/user/9538321b-4019-4f14-a472-0d3c163264d8/qwvt-dd04643d.user-non-login-bg.png) no-repeat 0 0/cover;
+}
+
+/* 注册 | 登录 */
+:local(.header > p) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .4rem;
+}
+
+:local(.main) {}
+
+:local(.order-info) {
+  width: 100%;
+  height: 2.48rem;
+  padding-top: .4rem;
+  border-bottom: 1px solid #CCC;
+}
+
+:local(.order-info > .icon-wrapper) {
+  float: left;
+  width: 33.33%;
+  color: #585C64;
+}
+
+:local(.order-info .icon) {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1.12rem;
+  height: 1.12rem;
+  font-size: .48rem;
+  line-height: 1.12rem;
+  background-color: #fcf9f1;
+  border-radius: .56rem;
+}
+
+/*
+ * 待付款
+ * 待收货
+ * 全部订单
+ */
+:local(.order-info p) {
+  margin-top: .22rem;
+}
+
+:local(ul.menu) {
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+  padding-left: .4rem;
+  font-size: .48rem;
+  line-height: .48rem;
+  border: 1px solid #CCC;
+  border-left: none;
+  border-right: none;
+}
+
+/* 我的收藏 购物车历史 ... ... */
+:local(ul.menu > li) {
+  height: 1.4rem;
+  color: #555;
+  line-height: 1.4rem;
+  text-align: left;
+  border-bottom: 1px solid #CCC;
+}
+
+/* 我的银行卡 */
+:local(ul.menu > li:nth-last-child(1)) {
+  border-bottom: none;
+}
+
+:local(.footer) {
+  margin-top: .6rem;
+  padding-bottom: .4rem;
+  background-color: #F3F4F5;
+}
+
+:local(.download) {
+  width: 100%;
+  height: 1.8rem;
+  padding: .3rem .4rem;
+  border-bottom: 1px solid #DDD;
+}
+
+:local(.download > .vip) {
+  float: left;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: .28rem;
+  color: #fff;
+  font: 700 .35rem/1.2rem icomoon;
+  background-color: #DF007C;
+  border-radius: .24rem;
+}
+
+:local(.download > .slogen) {
+  float: left;
+  height: 1.2rem;
+  color: #222;
+  line-height: 1.2rem;
+  font: 400 .44rem/1.2rem Helvetica;
+}
+
+:local(.download > .btn-download) {
+  float: right;
+  width: 1.96rem;
+  height: .88rem;
+  margin-top: .16rem;
+  margin-bottom: .16rem;
+  color: #DF007C;
+  border: 1px solid #DF007C;
+  border-radius: .1rem;
+}
+
+:local(.about) {
+  width: 100%;
+  height: .92rem;
+  padding: 0 .4rem;
+}
+
+:local(.about > a) {
+  float: left;
+  margin-right: .32rem;
+  color: #585C64;
+  font: .35rem/.92rem Helvetica;
+}
+
+/* 登录 */
+:local(.about > a:nth-last-child(1)) {
+  float: right;
+  margin-right: .32rem;
+}
+
+/* 注册 */
+:local(.about > a:nth-last-child(2)) {
+  float: right;
+  margin-right: 0;
+}
+
+/* Copyright */
+:local(.copyright) {
+  color: #ccc;
+  font-size: .34rem;
+}
+
+/* 粤公安 */
+:local(.record) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .2rem;
+  color: #ccc;
+  height: 1rem;
+  font-size: .34rem;
+}
+
+/* 警徽 */
+:local(.police-shield) {
+  width: .5rem;
+  height: .5rem;
+}
+
+/* 备案号 */
+:local(.record-no) {
+  margin-left: .1rem;
+}
