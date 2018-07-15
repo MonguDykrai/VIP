@@ -30,7 +30,7 @@ componentDidMount() {
 </Switch>
 ```
 
-https://github.com/supnate/react-geek-time/blob/master/src/c12/Counter.js
+<https://github.com/supnate/react-geek-time/blob/master/src/c12/Counter.js>
 如何组织 actions 和 reducers
 
 利用 redux 做状态管理
@@ -58,7 +58,7 @@ import { Route, Redirect } from 'react-router-dom'
 
 将登陆状态存在 localStorage 中
 
-https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+<https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage>
 
 ```js
 const initialState = {
@@ -67,6 +67,64 @@ const initialState = {
 }
 
 localStorage.setItem('loggedIn', 'true')
+```
+
+## local style
+
+如何使用局部样式？
+
+PostCSS入门教程
+<http://www.w3cplus.com/blog/tags/516.html>
+
+CSS Modules in React and Webpack Tutorial
+<https://www.youtube.com/watch?v=u9LBSeeJzXc>
+<https://github.com/css-modules/css-modules>
+
+PostCSS ( react脚手架中有配置 )
+<https://github.com/postcss/postcss>
+<https://postcss.org/>
+
+Rucksack ( A little bag of CSS superpowers )
+<https://www.rucksackcss.org/>
+
+css-loader
+<https://github.com/webpack-contrib/css-loader>
+
+PostCSS真的太好用了！
+<https://www.rucksackcss.org/>
+
+```css
+/* ./src/components/Greeting/index.css */
+:local(.red) { color: red; }
+
+/*
+ * When declaring a local classname you can
+ * compose a local class from another local classname.
+ * <https://github.com/webpack-contrib/css-loader>
+ */
+:local(.green) {
+  composes: red;
+  color: green;
+}
+
+:local(.btnGoodbye) {
+  composes: bye hi from '../Goodbye/index.css';
+  color: crimson;
+}
+
+:local(h2) {
+  color: chocolate;
+}
+
+.blue {
+  color: blue;
+}
+
+/* styles.css */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
 ```
 
 what's next
@@ -78,10 +136,3 @@ what's next
 2018年7月13日07:08:46
 先通过前端模拟
 2018年7月14日14:51:52
-
-## 遇到的问题
-
-样式命名冲突（首要解决！！！！）
-如何解决？
-
-<https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e>

@@ -26,7 +26,6 @@ import './styles/login-by-tel.css'
 import './styles/login-by-pas.css'
 import './styles/components.css'
 import './styles/icons.css'
-import './styles/user-logged-in.css'
 
 const icons = [faTimes, faChevronLeft, faEye, faUser, faWallet, faTruck, faListAlt]
 
