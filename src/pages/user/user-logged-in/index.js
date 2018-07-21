@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink as Link } from 'react-router-dom'
+import { logOut } from '../../../actions'
 
 import styles from './index.css'
 console.log(styles)
 
 class UserLoggedIn extends Component {
   render() {
+    const { logOut } = this.props
     return (
       <div className={styles['logged-in']}>
         <div className={styles.header}>
@@ -57,7 +61,7 @@ class UserLoggedIn extends Component {
             <li>实名认证</li>
             <li>我的银行卡</li>
           </ul>
-          <button className={styles['btn-logout']}>退出登录</button>
+          <button className={styles['btn-logout']} onClick={logOut}>退出登录</button>
         </div>
         <div className={styles.footer}>
           <div className={styles.download}>
@@ -81,4 +85,8 @@ class UserLoggedIn extends Component {
   }
 }
 
-export default UserLoggedIn
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ logOut }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(UserLoggedIn)

@@ -14,6 +14,11 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, {
         loggedIn: true
       })
+    case 'LOG_OUT':
+      localStorage.removeItem('loggedIn')
+      return Object.assign({}, state, {
+        loggedIn: false
+      })
     default:
       return state
   }
