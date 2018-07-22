@@ -183,6 +183,12 @@ module.exports = {
                         importLoaders: 1,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
+
+                        /* modified */
+                        modules: true,
+                        // localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                        localIdentName: '[path][name]__[local]',
+                        camelCase: true //  Export Classnames in CamelCase
                       },
                     },
                     {

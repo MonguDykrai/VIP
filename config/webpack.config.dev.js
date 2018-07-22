@@ -164,6 +164,12 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
+
+                  /* modified */
+                  modules: true,
+                  localIdentName: '[path][name]__[local]',
+                  // localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  camelCase: true //  Export Classnames in CamelCase
                 },
               },
               {

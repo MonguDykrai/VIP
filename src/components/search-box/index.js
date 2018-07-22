@@ -8,27 +8,26 @@ import styles from './index.css'
 class SearchBox extends Component {
   render() {
     const { loggedIn } = this.props
-    console.log(loggedIn)
     return (
-      <div className={styles['comp-search-box']}>
+      <div className={styles.comSearchBox}>
         {loggedIn ? (
-          <Link to="/user" className={styles['link-login']}>
+          <Link to="/user" className={styles.linkLogin}>
             <FontAwesomeIcon
               icon="user"
-              className={styles['fa-user']}
+              className={styles.faUser}
             />
           </Link>
         ) : (
-          <Link to="/login-by-tel" className={styles['link-login']}>
+          <Link to="/login-by-tel" className={styles.linkLogin}>
             登录
           </Link>
         )}
 
         <input
-          className={styles['ipt-search']}
+          className={styles.iptSearch}
           placeholder="大家正在搜索：面膜"
         />
-        <i className={styles['icon-classify']} />
+        <i className={styles.iconClassify} />
       </div>
     )
   }

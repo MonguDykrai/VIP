@@ -25,12 +25,12 @@ class LoginByTel extends Component {
     const { iptTelNum, iptCaptcha } = this.state
     const { logIn } = this.props
     return (
-      <div className="page-login">
+      <div className={styles.pageLogin}>
         {/* header */}
         <div className={styles.header}>
           <div className={styles.logo} />
           <Link to="/">
-            <FontAwesomeIcon icon="times" className={styles['fa-times']} />
+            <FontAwesomeIcon icon="times" className={styles.faTimes} />
           </Link>
         </div>
         {/* main */}
@@ -57,7 +57,7 @@ class LoginByTel extends Component {
             />
             <button onClick={this._getCaptcha}>获取验证码</button>
           </div>
-          <div className={styles['btn-login']}>
+          <div className={styles.btnLogin}>
             <button onClick={logIn}>手机号注册登录</button>
           </div>
           <p className={styles.term}>
