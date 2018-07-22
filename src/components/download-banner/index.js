@@ -7,15 +7,18 @@ import { hideDownloadBanner } from '../../actions'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import styles from './index.css'
+// console.log(styles)
+
 class DownloadBanner extends Component {
   render() {
     const { hideDownloadBanner } = this.props
     return (
-      <div className="comp-download-banner">
+      <div className={styles['com-download-banner']}>
         <button onClick={hideDownloadBanner}>
           <FontAwesomeIcon
+            className={styles['fa-times']}
             icon="times"
-            style={{ color: '#f2d1d5', top: '0.04rem', left: '0.08rem' }}
           />
         </button>
       </div>

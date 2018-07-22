@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { logIn } from '../../actions'
 
 import styles from './index.css'
-console.log(styles)
+// console.log(styles)
 
 class LoginByTel extends Component {
   constructor(props) {
@@ -26,37 +26,41 @@ class LoginByTel extends Component {
     const { logIn } = this.props
     return (
       <div className="page-login">
+        {/* header */}
         <div className={styles.header}>
           <div className={styles.logo} />
           <Link to="/">
             <FontAwesomeIcon icon="times" className={styles['fa-times']} />
           </Link>
         </div>
-        <div className="login__main">
-          <div className="main__tel">
+        {/* main */}
+        <div className={styles.main}>
+          <div className={styles.tel}>
             <label htmlFor="telNumber">手机号</label>
             <input
               placeholder="请输入手机号"
               id="telNumber"
+              className={styles.telNumber}
               value={iptTelNum}
               readOnly
             />
             {/* label 标签与 input 标签通过 id 进行关联 */}
           </div>
-          <div className="main__captcha">
+          <div className={styles.captcha}>
             <label htmlFor="captcha">验证码</label>
             <input
               placeholder="请输入验证码"
               id="captcha"
+              className={styles.captcha}
               value={iptCaptcha}
               onChange={this._captchaChange}
             />
             <button onClick={this._getCaptcha}>获取验证码</button>
           </div>
-          <div className="main__btn-login">
+          <div className={styles['btn-login']}>
             <button onClick={logIn}>手机号注册登录</button>
           </div>
-          <p className="main__term">
+          <p className={styles.term}>
             若您输入的手机号未注册，将会进入注册流程。注册即视为同意
             <a href="javascript: void(0);">《唯品会服务条款》</a>
             、
@@ -82,7 +86,7 @@ class LoginByTel extends Component {
     })
   }
 
-  _captchaChange() {}
+  _captchaChange() { }
 }
 
 const mapDispatchToProps = dispatch => {

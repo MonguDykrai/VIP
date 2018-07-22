@@ -22,10 +22,6 @@ import {
 // 导入样式文件
 import './styles/media_query.css'
 import './styles/styles.css'
-import './styles/login-by-pas.css'
-import './styles/login-by-tel.css'
-import './styles/components.css'
-import './styles/icons.css'
 
 const icons = [faTimes, faChevronLeft, faEye, faUser, faWallet, faTruck, faListAlt]
 

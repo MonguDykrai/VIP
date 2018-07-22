@@ -3,30 +3,32 @@ import { connect } from 'react-redux'
 import { NavLink as Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import styles from './index.css'
+
 class SearchBox extends Component {
   render() {
     const { loggedIn } = this.props
     console.log(loggedIn)
     return (
-      <div className="comp-search-box">
+      <div className={styles['comp-search-box']}>
         {loggedIn ? (
-          <Link to="/user" className="search-box__link-login">
+          <Link to="/user" className={styles['link-login']}>
             <FontAwesomeIcon
               icon="user"
-              style={{ fontSize: 30, color: '#585C64' }}
+              className={styles['fa-user']}
             />
           </Link>
         ) : (
-          <Link to="/login-by-tel" className="search-box__link-login">
+          <Link to="/login-by-tel" className={styles['link-login']}>
             登录
           </Link>
         )}
 
         <input
-          className="search-box__input-search"
+          className={styles['ipt-search']}
           placeholder="大家正在搜索：面膜"
         />
-        <i className="icon-classify search-box__icon-classify" />
+        <i className={styles['icon-classify']} />
       </div>
     )
   }

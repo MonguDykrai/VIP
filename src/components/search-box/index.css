@@ -1,18 +1,10 @@
-.comp-download-banner {
-  width: 15rem;
-  height: 2.6rem;
-  background-image: url(https://uploads.codesandbox.io/uploads/user/9538321b-4019-4f14-a472-0d3c163264d8/d7HU-download-banner.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.comp-search-box {
+:local(.comp-search-box) {
   width: 100%;
   height: 1.28rem;
   background-color: #f9f9fa;
 }
 
-.search-box__link-login {
+:local(.link-login) {
   float: left;
   width: 1.28rem;
   height: 0.84rem;
@@ -20,7 +12,12 @@
   line-height: 0.84rem;
 }
 
-.search-box__input-search {
+:local(.fa-user) {
+  font-size: .6rem;
+  color: #585C64;
+}
+
+:local(.ipt-search) {
   float: left;
   width: 8.2rem;
   height: 0.84rem;
@@ -30,7 +27,7 @@
   background-color: #f3f4f5;
 }
 
-.search-box__icon-classify {
+:local(.icon-classify) {
   float: right;
   width: 0.68rem;
   height: 0.68rem;
