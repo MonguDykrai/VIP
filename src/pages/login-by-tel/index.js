@@ -5,6 +5,9 @@ import { NavLink as Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { logIn } from '../../actions'
 
+import styles from './index.css'
+console.log(styles)
+
 class LoginByTel extends Component {
   constructor(props) {
     super(props)
@@ -18,19 +21,15 @@ class LoginByTel extends Component {
     this._captchaChange = this._captchaChange.bind(this)
   }
 
-  // componentDidMount() {
-  //   this.props.history.push(this.props.location.pathname)
-  // }
-
   render() {
     const { iptTelNum, iptCaptcha } = this.state
     const { logIn } = this.props
     return (
       <div className="page-login">
-        <div className="login__header">
-          <div className="header__logo" />
+        <div className={styles.header}>
+          <div className={styles.logo} />
           <Link to="/">
-            <FontAwesomeIcon icon="times" />
+            <FontAwesomeIcon icon="times" className={styles['fa-times']} />
           </Link>
         </div>
         <div className="login__main">
@@ -54,7 +53,7 @@ class LoginByTel extends Component {
             />
             <button onClick={this._getCaptcha}>获取验证码</button>
           </div>
-          <div className="main__login-button">
+          <div className="main__btn-login">
             <button onClick={logIn}>手机号注册登录</button>
           </div>
           <p className="main__term">

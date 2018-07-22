@@ -18,6 +18,7 @@ class Vip extends Component {
             <Route path="/user" component={User} />
             <Route path="/forgot-pwd" component={ForgotPwd} />
             <Route path="/login-by-pas" component={LoginByPas} />
+            {/* 重定 ( Redirect ) 向会自动往 history 栈中 push */}
             <Route
               path="/login-by-tel"
               render={() => (loggedIn ? <Redirect to="/" /> : <LoginByTel />)}

@@ -6,7 +6,7 @@ import { NavLink as Link } from 'react-router-dom'
 import { logOut } from '../../../actions'
 
 import styles from './index.css'
-console.log(styles)
+// console.log(styles)
 
 class UserLoggedIn extends Component {
   render() {

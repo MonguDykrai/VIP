@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink as Link } from 'react-router-dom'
 
 import styles from './index.css'
-console.log(styles)
+// console.log(styles)
 
 class UserLoggedOut extends Component {
   render() {
