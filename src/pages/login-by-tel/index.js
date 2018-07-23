@@ -62,9 +62,9 @@ class LoginByTel extends Component {
           </div>
           <p className={styles.term}>
             若您输入的手机号未注册，将会进入注册流程。注册即视为同意
-            <a href="javascript: void(0);">《唯品会服务条款》</a>
+            <a href="about:blank">《唯品会服务条款》</a>
             、
-            <a href="javascript: void(0);">《隐私条款》等</a>
+            <a href="about:blank">《隐私条款》等</a>
           </p>
           <form>
             <fieldset>
