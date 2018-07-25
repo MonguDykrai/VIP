@@ -1,0 +1,114 @@
+:local(.search-box) {
+  position: relative;
+  width: 100%;
+  height: 1.24rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #FFF;
+}
+
+/* left arrow */
+:local(.fa-chevron-left) {
+  position: absolute;
+  left: 0.24rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9b9b9b;
+  font-size: 0.48rem;
+}
+
+:local(.ipt-search) {
+  width: 8.2rem;
+  height: 0.84rem;
+  padding-left: 0.28rem;
+  margin: .2rem auto .2rem;
+  border-radius: 0.84rem;
+  border: 1px solid #E7E7E7;
+  background-color: #f3f4f5;
+}
+
+/* 搜索 */
+:local(.btn-search) {
+  position: absolute;
+  right: 0.20rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .4rem;
+}
+
+:local(.search-history) {
+  width: 100%;
+  height: 3.2rem;
+  padding: .6rem .4rem 0;
+
+  & > p {
+    height: .48rem;
+    line-height: .48rem;
+
+    /* 最近搜索 */
+    & > span {
+      float: left;
+    }
+
+    /* 清空 */
+    & > button {
+      float: right;
+      line-height: .48rem;
+    }
+  }
+}
+
+:local(.search-history ul.search-list) {
+  width: 100%;
+  height: .8rem;
+  line-height: .8rem;
+  margin-top: .6rem;
+  color: #5D78AB;
+  font-size: .36rem;
+
+  & > li {
+    float: left;
+    margin-right: .16rem;
+    padding: 0 .39rem;
+    border: 1px solid #E2E6EE;
+  }
+}
+
+/* 分割线 all browsers supported */
+:local(.split-line) {
+  margin: 0 .44rem;
+  height: 1px;
+  border: 0;
+  background-color: #E7E7E7;
+}
+
+:local(.top-search) {
+  width: 100%;
+  height: 3.2rem;
+  padding: .6rem .4rem 0;
+
+  & > p {
+    height: .48rem;
+    line-height: .48rem;
+
+    /* 最近搜索 */
+    & > span {
+      float: left;
+    }
+  }
+}
+
+:local(.top-search ul.top-search-list) {
+  height: .8rem;
+  line-height: .8rem;
+  margin-top: .6rem;
+  color: #5D78AB;
+  font-size: .36rem;
+
+  & > li {
+    float: left;
+    margin-right: .16rem;
+    margin-bottom: .32rem;
+    padding: 0 .39rem;
+    border: 1px solid #E2E6EE;
+  }
+}

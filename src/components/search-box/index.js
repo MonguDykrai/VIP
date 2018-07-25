@@ -6,6 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './index.css'
 
 class SearchBox extends Component {
+  constructor(props) {
+    super(props)
+
+    this.focusTextInput = this.focusTextInput.bind(this)
+  }
+
   render() {
     const { loggedIn } = this.props
     return (
@@ -26,10 +32,15 @@ class SearchBox extends Component {
         <input
           className={styles.iptSearch}
           placeholder="大家正在搜索：面膜"
+          onClick={this.focusTextInput}
         />
         <i className={styles.iconClassify} />
       </div>
     )
+  }
+
+  focusTextInput() {
+    window.location.hash = 'search' // Change Url to localhost:3000/#/search
   }
 }
 

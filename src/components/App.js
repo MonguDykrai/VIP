@@ -7,6 +7,7 @@ import LoginByTel from '../pages/login-by-tel'
 import LoginByPas from '../pages/login-by-pas'
 import ForgotPwd from '../pages/forgot-pwd'
 import User from '../pages/user'
+import Search from '../pages/search'
 
 class Vip extends Component {
   render() {
@@ -15,6 +16,7 @@ class Vip extends Component {
       <Router>
         <div className="vip">
           <Switch>
+            <Route path="/search" component={Search} />
             <Route path="/user" component={User} />
             <Route path="/forgot-pwd" component={ForgotPwd} />
             <Route path="/login-by-pas" component={LoginByPas} />

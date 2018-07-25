@@ -52,6 +52,7 @@ class LoginByTel extends Component {
               placeholder="请输入验证码"
               id="captcha"
               className={styles.captcha}
+              style={{ border: 'none' }}
               value={iptCaptcha}
               onChange={this._captchaChange}
             />

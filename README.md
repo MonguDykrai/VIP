@@ -127,12 +127,49 @@ PostCSS真的太好用了！
 }
 ```
 
-what's next
+## 样式嵌套
 
-优化样式文件
-2018年7月22日11:56:57
+### 1. 安装 precss
+
+> npm install precss --save-dev
+
+### 2. 配置 webpack
+
+```js
+{
+  loader: require.resolve('postcss-loader'),
+  options: {
+    plugins: () => [
+      require('precss'),
+    ],
+  },
+},
+```
+
+### 3. 使用
+
+```css
+:local(.search-history) {
+  width: 100%;
+  height: 3.2rem;
+  padding: 0 .4rem;
+
+  /* 配置后支持样式嵌套 */
+  & > p {
+    height: .6rem;
+    background-color: crimson;
+  }
+}
+```
+
+<https://www.npmjs.com/package/precss>
+
+what's next
 
 写后台逻辑 JWT
 2018年7月13日07:08:46
 先通过前端模拟
 2018年7月14日14:51:52
+
+○ 优化样式文件
+2018年7月22日11:56:57
