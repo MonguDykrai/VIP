@@ -164,6 +164,21 @@ PostCSS真的太好用了！
 
 <https://www.npmjs.com/package/precss>
 
+## ul 没高解决方案
+
+将 li 的 display 值设置为 inline-block
+
+```css
+:local(.quick-entry > ul > li) {
+  display: inline-block;
+  width: 20%;
+
+  & img {
+    width: 100%;
+  }
+}
+```
+
 what's next
 
 写后台逻辑 JWT
